@@ -1,3 +1,3 @@
 FLASK_APP = main.py
 FLASK_ENV = development
-FLASK_DENUG = 1
+FLASK_DEBUG = 1
