@@ -29,44 +29,59 @@
             <p>Sed in porttitor tellus. Nullam ullamcorper varius sem, sit amet dictum nisl finibus at. Maecenas quis felis vitae sem fermentum aliquet ultrices vitae risus. Fusce nec erat nec odio fringilla laoreet at vel metus. Maecenas ut sapien sed orci eleifend pharetra. Praesent vel dictum diam. Suspendisse nec libero semper, cursus nisi eu, suscipit sem. Aliquam sollicitudin dui in ante fringilla, et consectetur justo aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         </article>
         <form>
-            <label for="name">Seu Nome:</label>
-            <input type="text" name="name" id="name">
-            <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email">
-            <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" id="cpf">
-            <input type="radio" id="masculino" name="genero" value="masculino">
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="feminino" name="genero" value="feminino">
-            <label for="feminino">Feminino</label>
-            <input type="radio" id="outro" name="genero" value="outro">
-            <label for="outro">Outro</label>
-            <input type="submit" value="Enviar">
+            <section id="data">
+                <label for="name">Seu Nome:</label>
+                <input type="text" name="name" id="name">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf">
+            </section>
+            <section id="gender">
+                <input type="radio" id="masculino" name="gender" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="gender" value="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="outro" name="gender" value="outro">
+                <label for="outro">Outro</label>
+            </section>
+            <section id="send">   
+                <input type="submit" value="Enviar">
+            </section> 
         </form>
     </section>
     <section id="display">
-        <h3><span>Sua seleção especial</span></h3>
+        <h3 class="line"><span>Sua seleção especial</span></h3>
         <article>
             <section>
+                <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6829307" alt="">
                 <h4>Nome do produto</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus varius pellentesque.</p>
                 <p>De: R$23,99</p>
                 <h3>Por: R$19,99</h3>
                 <p>ou 2x de R$9,99</p>
                 <button type="button" onclick="alert('Adicionado ao carrinho!')">Comprar</button>
-            </section>
+            </section> 
         </article>
-        <button type="button">Ainda mais produtos aqui!</button>
+        <button type="button" id="more-products">Ainda mais produtos aqui!</button>
     </section>
-    <section>
-        <h3><span>Compartilhe a novidade</span></h3>
+    <section id="friend-form">
+        <h3 class="line"><span>Compartilhe a novidade</span></h3>
         <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
         <form>
-            <label for="friend-name">Seu Nome:</label>
-            <input type="text" name="friend-name" id="friend-name">
-            <label for="friend-email">E-mail:</label>
-            <input type="text" name="friend-email" id="friend-email">
-            <input type="submit" value="Enviar agora">
+            <article>
+                <section id="friend-name">
+                    <label for="friend-name">Nome do seu amigo:</label>
+                    <input type="text" name="friend-name" id="friend-name">
+                </section> 
+                <section id=friend-email>
+                    <label for="friend-email">E-mail:</label>
+                    <input type="text" name="friend-email" id="friend-email">
+                </section>
+            </article>
+            <section id="friend-send">
+                <input type="submit" value="Enviar agora">
+            </section>
         </form>
     </section>
     <footer>

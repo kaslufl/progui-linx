@@ -31,39 +31,157 @@ body header nav ul {
     justify-content: space-between;
     justify-items: center;
     background-color: hotpink;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 body header nav ul li {
     background-color: lawngreen;
+    padding:10px;
 }
+
 /* Help Us */
-body section#help-us {
+#help-us {
     display: grid;
     grid-area: help-us;
     grid-template-areas: "text form";
+    grid-template-columns: 1fr 1fr;
     background-color: darkcyan;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    gap: 3vw;
 }
 
-body section#help-us article{
+#help-us article {
     grid-area: text;
     background-color: firebrick;
 }
 
-body section#help-us form{
+#help-us form {
     grid-area: form;
+    display: grid;
+    grid-template-areas: "data" "gender" "send";
+    grid-template-rows: 3fr 0.5fr 1fr;
+}
+
+#help-us form label{
+    height: 2px;
+}
+
+#help-us form input{
+    margin-bottom: 15px;
+}
+
+#data {
+    grid-area: data;
+    display:grid;
     background-color: greenyellow;
 }
 
-/* Produtos */
-body section#display {
-    display: grid;
-    grid-area: display;
-    background-color: darkgreen;
+#gender {
+    grid-area: gender;
+    display: inline;
+    color: blue;
+}
+#send {
+    grid-area: send;
+    background-color: crimson;
+}
+#send input[type="submit"] {
+    width: 100%;
+    height: 50px;
 }
 
-body section#display article{
-    display: flex;
+/* Display */
+#display {
+    display: grid;
+    grid-area: display;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    place-items: center;
+}
+
+body section#display article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     background-color: darkkhaki;
+    gap: 20px;
+}
+/* Produtos */
+section#display article section img {
+    width: 100%;
+    height: auto;
+}
+
+section#display article section button {
+    width: 100%;
+}
+
+#more-products {
+    margin: 20px;
+    width: 350px;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+/* Divisão */
+.line {
+    width: 100%;
+    line-height: 0.1em;
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin: 30px;
+}
+
+span {
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+/* Novidades */
+#friend-form {
+    display: grid;
+    grid-area: invite;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    place-items: center;
+}
+
+#friend-form form {
+    display: grid;
+    grid-template-areas: "data" "send";
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+#friend-form form article {
+    grid-area: data;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50vw;
+    gap: 20px;
+}
+
+#friend-name {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#friend-name input{
+    width: 100%;
+}
+
+#friend-email {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#friend-email input{
+    width: 100%;
+}
+
+/* Rodapé */
+body footer{
+    display: grid;
+    place-items: center;
 }
