@@ -58,12 +58,14 @@
             {% for product in product_list %}
                 <section>
                     <img src="{{ product.get_image() }}" alt="">
-                    <h4>{{ product.get_name() }}</h4>
-                    <p>{{ product.get_description() }}</p>
-                    <p>De: R${{ product.get_old_price() }}</p>
-                    <h3>Por: R${{ product.get_price() }}</h3>
-                    <p>ou {{ product.get_installments() }}x de R${{ product.get_value() }}</p>
-                    <button type="button" onclick="alert('Adicionado ao carrinho!')">Comprar</button>
+                    <section>
+                        <h4>{{ product.get_name() }}</h4>
+                        <p>{{ product.get_description() }}</p>
+                        <p>De: R${{ product.get_old_price() }}</p>
+                        <h3>Por: R${{ product.get_price() }}</h3>
+                        <p>ou {{ product.get_installments() }}x de R${{ product.get_value() }}</p>
+                        <button type="button" onclick="alert('Adicionado ao carrinho!')">Comprar</button>
+                    </section>
                 </section> 
             {% endfor %}
         </article>
