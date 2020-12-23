@@ -55,15 +55,17 @@
     <section id="display">
         <h3 class="line"><span>Sua seleção especial</span></h3>
         <article>
-            <section>
-                <img src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6829307" alt="">
-                <h4>Nome do produto</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus varius pellentesque.</p>
-                <p>De: R$23,99</p>
-                <h3>Por: R$19,99</h3>
-                <p>ou 2x de R$9,99</p>
-                <button type="button" onclick="alert('Adicionado ao carrinho!')">Comprar</button>
-            </section> 
+            {% for product in product_list %}
+                <section>
+                    <img src="{{ product.get_image() }}" alt="">
+                    <h4>{{ product.get_name() }}</h4>
+                    <p>{{ product.get_description() }}</p>
+                    <p>De: R${{ product.get_old_price() }}</p>
+                    <h3>Por: R${{ product.get_price() }}</h3>
+                    <p>ou {{ product.get_installments() }}x de R${{ product.get_value() }}</p>
+                    <button type="button" onclick="alert('Adicionado ao carrinho!')">Comprar</button>
+                </section> 
+            {% endfor %}
         </article>
         <button type="button" id="more-products">Ainda mais produtos aqui!</button>
     </section>
