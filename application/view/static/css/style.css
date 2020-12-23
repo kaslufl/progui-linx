@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-areas: "header" "help-us" "display" "invite" "footer";
@@ -108,18 +112,18 @@ body header nav ul li {
     place-items: center;
 }
 
-body section#display article {
+#display article {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 /* Produtos */
-section#display article section img {
+#display article section img {
     width: 100%;
     height: auto;
 }
 
-section#display article section button {
+#display article section button {
     width: 100%;
     padding: 10px 24px;
 }
@@ -183,8 +187,9 @@ span {
     grid-template-rows: 1fr 1fr;
 }
 
-#friend-email input{
+#friend-email input[type="text"]{
     width: 100%;
+    height: 30px;
 }
 
 #friend-send input[type="submit"] {
@@ -215,4 +220,75 @@ button , input[type="submit"]{
     border: 2px solid #707070;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
+}
+
+/* media queries */
+@media only screen and (max-width: 1350px) {
+    body header nav ul {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body header nav ul li {
+        width: 300px;
+        padding:15px 15px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 8px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #help-us {
+        display: grid;
+        grid-area: help-us;
+        grid-template-areas: "text" "form";
+        grid-template-columns: 1fr;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        gap: 3vw;
+    }
+
+    #help-us form label{
+        height: 20px;
+    }
+
+    #display {
+        display: grid;
+        grid-area: display;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        place-items: center;
+    }
+    
+    #display article {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    #display article section {
+        display: grid;
+        grid-template-areas: "image details";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #display article section img {
+        width: 100%;
+        height: auto;
+        grid-area: image;
+    }
+    
+    #display article section section {
+        grid-area: details;
+        display: inline;
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #friend-form form article {
+        display: flex;
+        flex-direction:column;
+    }
 }
